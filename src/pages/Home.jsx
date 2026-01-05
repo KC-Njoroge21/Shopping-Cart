@@ -33,9 +33,9 @@ const Home = () => {
   return (
     <div className='min-h-[80vh] grid sm:grid-cols-3 space-x-5 space-y-10 lg:grid-cols-4 max-w-6xl mx-auto p-3 '>
       {
-        products.length <= 0 ? null : products.map((item) => {
+        products.length <= 0 ? null : products.map((item, index) => {
           return (
-            <ProductTile item={item} />
+            <ProductTile key={index} item={item} />
           )
         })
       }
