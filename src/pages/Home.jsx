@@ -11,7 +11,6 @@ const Home = () => {
     try {
       const response = await fetch(`https://fakestoreapi.com/products`)
       const data = await response.json()
-      console.log(data)
       setProducts(data)
       setLoading(false)
     } catch (e) {
@@ -25,9 +24,11 @@ const Home = () => {
   }, [])
 
   if (loading) {
-    <div className='min-h-screen w-full flex justify-center items-center'>
+    return (
+      <div className='h-screen w-full flex justify-center text-4xl font-semibold items-center'>
       Loading...
     </div>
+    )
   }
 
   return (

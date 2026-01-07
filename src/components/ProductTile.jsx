@@ -9,13 +9,13 @@ const ProductTile = (props) => {
   function handleAddToCart() {
     // Dispatch action to add item to cart
     dispatch(addToCart(props.item))
-    console.log("Item added to cart:", props.item)
+    
   }
 
   function handleRemoveFromCart() {
     // Dispatch action to remove item from cart
     // (Implementation not provided in the original code)
-    console.log("Remove from cart functionality not implemented yet.")
+    
     dispatch(removeFromCart(props.item.id))
   }
 
